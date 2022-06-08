@@ -1,0 +1,106 @@
+@media (min-width: 300px) {
+    body {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        padding-bottom: 10%;
+    }
+
+    
+
+    .contact {
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+
+        > article, section {
+            display: flex;
+            flex-direction: column;
+        }
+
+        section {
+            row-gap: 15px;
+        }
+
+        > article:nth-child(1) {
+            row-gap: 30px;
+        }
+
+        h1 {
+            color: $defaultRed;
+            font-size: $h1SizeMobile;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            align-items: flex-end;
+            width: 100%;
+        }
+
+        input, textarea {
+            width: 100%;
+            font-family: $defaultFont;
+            border: 0px none transparent;
+            border-bottom: 2px solid $defaultColor;
+            font-size: 18px;
+            padding-bottom: 5%;
+        }
+
+        textarea {
+            height: 15vh;
+        }
+
+        /*
+        Attribute selector is more specific than tag selector.
+        Because not every tag has the same attribute.
+        That is why, the attribute selector CSS will overwrite
+        the tag selector CSS.
+        */
+
+        [type="submit"] {
+            width: fit-content;
+            border: 0px none transparent;
+            color: white;
+            background-color: $greenColor;
+            padding: 4%;
+        }
+
+        h2,[class^="fa-"] {
+            color: $greenColor;
+        }
+
+        aside {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            row-gap: 20px;
+            > a {
+                font-size: 14px;
+                width: fit-content;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        div {
+            font-size: 28px;
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    footer {
+        text-align: center;
+    }
+}
