@@ -5,14 +5,245 @@
         flex-direction: column;
         row-gap: 25px;
         padding-bottom: 10%;
+        padding-left: 0;
+        padding-right: 0;
     }
 
-    
+    header {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        height: 60vh;
+        padding: 5%;
+        @include bgPicture("/img/pic-16.jpg",cover);
+        color: white;
+    }
+
+    nav {
+        height: 100%;
+        width: 30%;
+    }
+
+    nav > ul {
+        display: none;
+    }
+
+    details {
+        text-align: right;
+        position: fixed;
+        width: 30%;
+        > ul {
+            width: 100%;
+        }
+
+        li {
+            list-style-type: none;
+            width: 100%;
+            display: flex;
+        }
+
+        a {
+            width: 100%;
+            padding: 10%;
+            color: black;
+            text-decoration: none;
+            background-color: rgba(254,254,254,.7);
+        }
+    }
+
+    summary {
+        font-size: $h1SizeMobile;
+    }
+
+    main {
+        padding-left: 10%;   
+        padding-right: 10%;   
+    }
+
+    main > section:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 35px;
+        color: $defaultColor;
+        text-align: center;
+
+        > h1 {
+            font-size: $h2SizeMobile;
+            font-weight: 300;
+        }
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        align-items: center;
+        color: $defaultColor;
+    }
+
+    .member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 25px;
+
+        aside {
+            width: 80%;
+            height: 25vh;
+            border-radius: 10px;
+        }
+
+        > div {
+            display: flex;
+            flex-direction:  column;
+            row-gap: 20px;
+        }
+        
+        p, h2, h4 {
+            text-align: center;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        h2 {
+            color: $defaultBlue;
+        }
+
+        h4 {
+            color: $jobTitleColor;
+        }
+
+        a {
+            color: $defaultBlue;
+            font-size: 30px;
+            text-decoration: none;
+        }
+
+    }
+
+    .member:nth-child(1) > aside {
+        @include bgPicture("/img/pic-05.jpg");
+    }
+
+    .member:nth-child(2) > aside {
+        @include bgPicture("/img/pic-08.jpg");
+    }
+
+    .member:nth-child(3) > aside {
+        @include bgPicture("/img/pic-07.jpg");
+    }
+
+    .member:nth-child(4) > aside {
+        @include bgPicture("/img/pic-06.jpg");
+    }
+
+    .subscription {
+        @include bgPicture("/img/pic-12.jpg");
+        width: 100%;
+        height: 25vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        form {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        input {
+            padding: 3%;
+            font-family: $defaultFont;
+        }
+
+        [type="email"] {
+            width: 60%;
+            border: 0px none transparent;
+        }
+
+        [type="submit"] {
+            font-weight: 600;
+            color: white;
+            background-color: $defaultBlue;
+            border: 0px none transparent;
+        }
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 30px;
+        color: $defaultColor;
+
+        > article {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            row-gap: 50px;
+            min-height: 35vh;
+            width: 80%;
+            padding: 1%;
+            text-align: center;
+        }
+
+        i {
+            font-size: 60px;
+            color: $defaultColor;
+        }
+
+        a {
+            padding: 5%;
+            color: white;
+            text-decoration: none;
+        }
+
+        article:nth-child(1) > a {
+            background-color: $defaultBlue;
+        }
+
+        article:nth-child(2) > a {
+            background-color: $defaultGreen;
+        }
+
+        article:nth-child(3) > a {
+            background-color: $defaultRed;
+        }
+    }
+
+    .history {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        > aside {
+            @include bgPicture;
+            width: 100%;
+            height: 20vh;
+        }
+
+        > article {
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+            text-align: justify;
+            line-height: 1.5;
+            color: $defaultColor;
+        }
+
+        h1 {
+            color: $defaultBlue;
+            font-size: $h2SizeMobile;
+            font-weight: 300;
+        }
+    }
 
     .contact {
         display: flex;
         flex-direction: column;
         row-gap: 25px;
+        color: $defaultColor;
 
         > article, section {
             display: flex;
@@ -31,6 +262,7 @@
             color: $defaultRed;
             font-size: $h1SizeMobile;
             text-align: center;
+            font-weight: 300;
         }
 
         p {
