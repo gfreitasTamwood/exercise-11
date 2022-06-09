@@ -1,0 +1,71 @@
+@media (min-width: 600px) {
+
+    header {
+        height: 45vh;
+    }
+
+    .member {
+        flex-direction: row;
+        justify-content: space-between;
+        > div {
+            width: 65%;
+            align-items: flex-start;
+        }
+
+        > aside {
+            width: 30%;
+        }
+
+        p, h2, h4 {
+            line-height: 1.5;
+            text-align: left;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        p:nth-child(4) {
+            width: 50%;
+        }
+    }
+
+    .subscription {
+        height: 15vh;
+    }
+
+    .services {
+
+        > article {
+            width: 100%;
+            justify-content: unset;
+            min-height: 20vh;
+        }
+
+        a {
+            padding: 2%;
+        }
+    }
+
+    .history {
+        flex-direction: row;
+        column-gap: 50px;
+        align-items: center;
+        > article {
+            width: 70%;
+        }
+    }
+    
+    .contact {
+        > article:nth-child(2) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        form {
+            width: 40%;
+        }
+
+        section {
+            width: 40%;
+        }
+    }
+}
