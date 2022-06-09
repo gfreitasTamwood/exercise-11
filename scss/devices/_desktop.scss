@@ -1,0 +1,104 @@
+@media (min-width: 1000px) {
+    body {
+        background-color: $bgGray;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 0;
+        row-gap: 0;
+    }
+
+    details {
+        display: none;
+    }
+
+    nav {
+        width: 50%;
+        height: fit-content;
+    }
+
+    nav > ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav li {
+        list-style-type: none;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        &:hover {
+            box-shadow: 0.5px 0.5px 1px 1px white;
+        }
+    }
+
+    nav a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        padding: 5%;
+        font-weight: 600;
+        font-size: $h3SizeMobile;
+        width: 100%;
+    }
+
+    main {
+        padding-left: 10%;
+        padding-right: 10%;
+        row-gap: 70px;
+    }
+
+    footer {
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    #about {
+        p {
+            font-size: $defaultFontSizeD;
+            width: 50%;
+        }
+    }
+
+    .team {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        > article {
+            width: 50%;
+        }
+    }
+
+    .subscription {
+        input {
+            padding: 1%;
+        }
+    }
+
+    .services {
+        flex-direction: row;
+        a {
+            padding: 5%;
+        }
+    }
+
+    .history {
+        > aside {
+            height: 35vh;
+        }
+    }
+
+    .contact {
+        width: 100%;
+        align-items: center;
+        > article:nth-child(1) {
+            text-align: center;
+            width: 50%;
+        }
+
+        > article:nth-child(2) {
+            justify-content: space-evenly;
+            width: 100%;
+        }
+    }
+}
